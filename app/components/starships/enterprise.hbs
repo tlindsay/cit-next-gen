@@ -1,0 +1,39 @@
+<h1 data-test="registry">{{@registry}}</h1>
+<div data-test="mission">
+  {{yield}}
+</div>
+
+<div class="helm">
+  <dl>
+    <dt>Engine Status:</dt>
+    <dd>{{this.engine.warpCoreStatus}}</dd>
+    <dt>Current Warp Factor:</dt>
+    <dd>{{this.engine.warpFactor}}</dd>
+    <dt>Current Impulse Speed</dt>
+    <dd>{{this.engine.impulseSpeed}}</dd>
+  </dl>
+
+  <button
+    type="button"
+    data-test="engage"
+    {{on "click" (fn this.engage)}}
+  >
+    Engage
+  </button>
+</div>
+
+<h2>Crew</h2>
+<dl>
+  <dt>Captain:</dt>
+  <dd data-test="captain">{{this.captain}}</dd>
+  <dt>First Officer:</dt>
+  <dd data-test="first-officer">{{this.firstOfficer}}</dd>
+  <dt>Second Officer:</dt>
+  <dd data-test="second-officer">{{this.secondOfficer}}</dd>
+  <dt>Medical Officer:</dt>
+  <dd data-test="medical-officer">{{this.medicalOfficer}}</dd>
+  <dt>Tactical Officer:</dt>
+  <dd data-test="tactical-officer">{{this.tacticalOfficer}}</dd>
+  <dt>Chief Engineer:</dt>
+  <dd data-test="chief-engineer">{{this.chiefEngineer}}</dd>
+</dl>
